@@ -1,0 +1,72 @@
+﻿@model EmployeeData
+
+<form method="post">
+<div>
+
+	<div>
+			<label>ID</label>
+			<input asp-for="ID" />
+	</div>
+	
+	<div>
+			<label>Employee Id Number</label>
+			<input asp-for="EmployeeID" />
+	</div>
+	
+	
+	<div>
+			<label> First Name </label>
+			<input asp-for="FirstName" />
+	</div>
+	
+	<div>
+			<label> Last Name </label>
+			<input asp-for="LastName" />
+			<span asp-validation-for="LastName" class="text-danger"></span>
+	</div>
+	
+	<div>
+			<label> Contact Number </label>
+			<input asp-for="ContactNo" />
+			<span asp-validation-for="ContactNo" class="text-danger"></span>
+
+	</div>
+
+	<div>
+			<label>Address</label>
+			<input asp-for="Address" />
+	</div>
+
+	<div>
+			<label>Branch</label>
+			<input asp-for="Branch" />
+	</div>
+
+	<div>
+			
+		<label>Department</label>
+
+			<select class="listbox" asp-items="new SelectList(ViewBag.Departmentlst)" asp-for="Department">
+				
+		</select>
+			
+	</div>
+
+	<div>
+			<label>Salary</label>
+			<input asp-for="Salary" />
+	</div>
+	
+
+	<button>
+		<a asp-action="Index" asp-controller="List">back</a>
+	</button>
+
+	<button type="submit" > create
+		
+	</button>
+	
+
+</div>
+
+</form>

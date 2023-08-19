@@ -1,0 +1,44 @@
+﻿@model Admin
+
+<form method="post">
+
+    <div>
+        <label>User Name</label>
+        <input asp-for="UserName" />
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label>Gender</label>
+        <input asp-for="Gender" />
+    </div>
+    <div>
+        <label>Branch</label>
+        <input asp-for="Branch" />
+    </div>
+    <div>
+        <label>Address</label>
+        <input asp-for="Address" />
+    </div>
+    <div>
+        <label>Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <div>
+        <button asp-action="AdminRegistration" asp-controller="Registration">
+            Register
+       
+    </button>
+    </div>
+
+
+</form>

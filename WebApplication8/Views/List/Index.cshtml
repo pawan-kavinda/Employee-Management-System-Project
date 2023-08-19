@@ -1,0 +1,67 @@
+﻿@model List<EmployeeData>
+
+	<table cellpadding="30" width="50%">
+
+		
+		<tr>
+			
+		<th width="100" >ID</th>
+		<th width="100">Employee ID</th>
+		<th width="300"> First Name</th>
+		<th width="300"> Last Name</th>
+		<th width="300">Contact Number</th>
+		<th width="300">Address</th>
+		<th width="300">Branch</th>
+		<th width="300">Department</th>
+		<th width="300">
+			Salary
+		</th>
+
+		</tr>
+
+		@foreach(var obj in Model)
+		{
+			<tr>
+				<td>@obj.ID</td>
+				<td>@obj.EmployeeID</td>
+				<td>@obj.FirstName</td>
+				<td>@obj.LastName</td>
+				<td>@obj.ContactNo</td>
+				<td>@obj.Address</td>
+				<td>@obj.Branch</td>
+				<td>@obj.Department</td>
+				<td>@obj.Salary</td>
+				<td>
+					<button>
+						<a asp-action="Edit" asp-route-id="@obj.ID" asp-controller="List">
+						  edit
+						</a>
+					</button>
+				</td>
+
+			<td>
+				<button >
+					<a asp-action="Delete" asp-route-id="@obj.ID" asp-controller="List">
+						Delete
+					</a>
+					
+				</button>
+			</td>
+			</tr>
+		
+		}
+	</table>
+		
+	<button>
+		<a asp-action="Create" asp-controller="List">create</a>
+	</button>
+
+	<button>
+		<a asp-action="settings" asp-controller="List">Settings</a>
+
+	</button>
+
+	<button>
+	<a asp-action="info" asp-controller="List">info</a>
+
+	</button>
